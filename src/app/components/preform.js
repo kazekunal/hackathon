@@ -11,32 +11,6 @@ const mulish = Mulish({
   display: "swap",
 });
 
-document.addEventListener("DOMContentLoaded", function () {
-  const button = document.getElementById("processButton");
-  button.addEventListener("click", processData);
-});
-
-function processData() {
-  // Get the textarea value
-  const textareaValue = document.getElementById("myTextarea").value;
-
-  // Split data based on new lines
-  const linesArray = textareaValue.split("\n");
-
-  // Process each line
-  const resultArrays = linesArray.map(function (line) {
-    // Split values within each line based on commas
-    return line.split(",");
-  });
-
-  // Display the result or do something with it
-  console.log(resultArrays);
-
-  // If you want to access individual values
-  const firstLineFirstValue = resultArrays[0][0];
-  console.log("First line, first value:", firstLineFirstValue);
-}
-
 const Preform = () => {
   const [qr, setQR] = useState();
   const [user, setUser] = useState({
